@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="AnchorPane" bottom="$null" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.jpa.javafx.sample.FXMLController">
+    <center>
+        <VBox prefHeight="400.0" prefWidth="500.0">
+           <children>
+               <TableView fx:id="magesTableView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                   <columns>
+                       <TableColumn fx:id="mageNameColumn" prefWidth="200.0" text="Magician Name">
+                           <cellValueFactory>
+                               <PropertyValueFactory property="name" />
+                           </cellValueFactory>
+                       </TableColumn>
+                       <TableColumn fx:id="mageCircleColumn" prefWidth="200.0" text="Circle">
+                           <cellValueFactory>
+                               <PropertyValueFactory property="circle" />
+                           </cellValueFactory>
+                       </TableColumn>
+                       <TableColumn fx:id="mageLevelColumn" prefWidth="98.0" text="Level">
+                           <cellValueFactory>
+                               <PropertyValueFactory property="level" />
+                           </cellValueFactory>
+                       </TableColumn>
+                   </columns>
+               </TableView>
+               <TableView fx:id="spellsTableView" prefHeight="200.0" prefWidth="500.0" VBox.vgrow="ALWAYS">
+                   <columns>
+                       <TableColumn prefWidth="498.0" text="Spell Name">
+                           <cellValueFactory>
+                               <PropertyValueFactory property="name" />
+                           </cellValueFactory>
+                       </TableColumn>
+                   </columns>
+               </TableView>
+           </children>
+        </VBox>
+    </center>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#newMageAction" prefWidth="100.0" text="New Mage" />
+                <Button mnemonicParsing="false" onAction="#deleteMageAction" prefWidth="100.0" text="Delete Mage" />
+            </children>
+        </VBox>
+    </right>
+</BorderPane>

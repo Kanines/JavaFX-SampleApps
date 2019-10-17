@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="590.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.jaxb.javafx.sample.FXMLController">
+    <children>
+        <TableView fx:id="examCardTableView" editable="true" prefHeight="380.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="name" prefWidth="165.0" text="Nazwa">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="name" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="teacher" prefWidth="175.0" text="Nauczyciel">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="teacher" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="subjectType" prefWidth="30.0" text="Typ">
+                    
+                </TableColumn>
+                <TableColumn fx:id="ects" prefWidth="35.0" text="ECTS">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="ects" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="grade" prefWidth="40.0" text="Ocena">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="grade" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="date" prefWidth="110.0" text="Data">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="isConfirmed" prefWidth="40.0" text="Zatw.">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="isConfirmed" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+        <Button fx:id="deleteSubjectButton" layoutX="342.0" layoutY="388.0" mnemonicParsing="false" onAction="#deleteSubjectAction" prefHeight="25.0" prefWidth="110.0" text="Usuń przedmiot" />
+        <Button fx:id="addSubjectButton" layoutX="227.0" layoutY="388.0" onAction="#addSubjectAction" prefWidth="110.0" text="Dodaj przedmiot" />
+        <Button fx:id="loadXmlButton" layoutX="10.0" layoutY="388.0" onAction="#loadXmlAction" prefWidth="100.0" text="Wczytaj z XML" />
+        <Button fx:id="saveXmlButton" layoutX="115.0" layoutY="388.0" onAction="#saveXmlAction" prefWidth="100.0" text="Zapisz do XML" />
+        <Button layoutX="465.0" layoutY="388.0" mnemonicParsing="false" onAction="#loadDefaultContentAction" prefHeight="25.0" prefWidth="125.0" text="Domyślna zawartość" />
+    </children>
+</AnchorPane>
